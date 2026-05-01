@@ -21,6 +21,12 @@ export const t = {
       'VAMIT transformiert manuelle Abläufe in intelligente, automatisierte Systeme. Von Dokumentenmanagement bis hin zu KI-gestützten Workflows – wir machen Ihr Unternehmen effizienter, fehlerfreier und zukunftssicher.',
     cta: 'Kostenlose Prozessanalyse anfordern',
     ctaSecondary: 'Referenzprojekte ansehen',
+    stats: [
+      { value: '90%', label: 'Ø Zeitersparnis' },
+      { value: '75%', label: 'Ø Kostensenkung' },
+      { value: '6+', label: 'Referenzprojekte' },
+      { value: '24h', label: 'Antwortzeit' },
+    ],
   },
 
   services: {
@@ -28,31 +34,36 @@ export const t = {
     subline: 'Fünf Säulen für Ihre digitale Transformation',
     items: [
       {
-        icon: '🗂️',
+        icon: 'FolderOpen',
+        color: 'blue',
         title: 'Dokumentenmanagement (DMS)',
         desc: 'Sicheres, zentralisiertes und DSGVO-konformes digitales Archivierungssystem für alle Ihre Unternehmensdokumente.',
         href: '/solutions/dms',
       },
       {
-        icon: '🤖',
+        icon: 'Brain',
+        color: 'purple',
         title: 'AI-Workflows',
         desc: 'Intelligente Datenextraktion und prädiktive Analysen – Ihre Prozesse lernen und optimieren sich selbst.',
         href: '/solutions/workflows',
       },
       {
-        icon: '⚙️',
+        icon: 'Settings2',
+        color: 'orange',
         title: 'Automatisierungen',
         desc: 'RPA und API-Integrationen für nahtlose Prozesse zwischen all Ihren bestehenden Systemen.',
         href: '/solutions/automations',
       },
       {
-        icon: '💻',
+        icon: 'Monitor',
+        color: 'teal',
         title: 'Custom Applications',
         desc: 'Maßgeschneiderte Web- und Unternehmensanwendungen, die exakt auf Ihre Branche und Abläufe zugeschnitten sind.',
         href: '/solutions/customApps',
       },
       {
-        icon: '💬',
+        icon: 'Bot',
+        color: 'sky',
         title: 'AI Agents & Chatbots',
         desc: 'Mehrsprachige Konversationsschnittstellen für 24/7-Support und automatisierte Kundeninteraktion.',
         href: '/solutions/chatbots',
@@ -204,21 +215,27 @@ export const t = {
       'Unsere Mission ist es, innovative Technologien zugänglich zu machen – nicht nur für Großkonzerne, sondern für jeden Betrieb, der wachsen und effizienter werden möchte.',
     expertiseHeadline: 'Unsere Expertise',
     expertise: [
-      { icon: '🧠', title: 'AI & Machine Learning', desc: 'Entwicklung intelligenter Modelle für Datenextraktion, Klassifizierung und prädiktive Analysen' },
-      { icon: '🗂️', title: 'Dokumentenmanagement', desc: 'Implementierung von DMS-Systemen mit DSGVO-konformer Archivierung und Volltextsuche' },
-      { icon: '🔗', title: 'Enterprise Integration', desc: 'Nahtlose Verbindung von ERP, CRM, APIs und Legacy-Systemen durch modernste Integrationslösungen' },
-      { icon: '💻', title: 'Full-Stack Development', desc: 'Entwicklung skalierbarer Web- und Mobile-Applikationen mit modernen Technologien' },
-      { icon: '📊', title: 'Business Process Optimization', desc: 'Analyse und Neugestaltung von Geschäftsprozessen für maximale Effizienz und Transparenz' },
-      { icon: '☁️', title: 'Cloud Architecture', desc: 'Design und Implementierung sicherer, skalierbarer Cloud-Infrastrukturen auf AWS, Azure und GCP' },
+      { icon: 'Brain',    title: 'AI & Machine Learning',          desc: 'Entwicklung intelligenter Modelle für Datenextraktion, Klassifizierung und prädiktive Analysen' },
+      { icon: 'FolderOpen', title: 'Dokumentenmanagement',         desc: 'Implementierung von DMS-Systemen mit DSGVO-konformer Archivierung und Volltextsuche' },
+      { icon: 'Link2',    title: 'Enterprise Integration',         desc: 'Nahtlose Verbindung von ERP, CRM, APIs und Legacy-Systemen durch modernste Integrationslösungen' },
+      { icon: 'Code2',    title: 'Full-Stack Development',         desc: 'Entwicklung skalierbarer Web- und Mobile-Applikationen mit modernen Technologien' },
+      { icon: 'BarChart2', title: 'Business Process Optimization', desc: 'Analyse und Neugestaltung von Geschäftsprozessen für maximale Effizienz und Transparenz' },
+      { icon: 'Cloud',    title: 'Cloud Architecture',             desc: 'Design und Implementierung sicherer, skalierbarer Cloud-Infrastrukturen auf AWS, Azure und GCP' },
     ],
     industries: {
       headline: 'Unsere Kernbranchen',
       items: [
-        { icon: '🔧', title: 'Fachbetriebe', desc: 'Handwerk, Elektro, SHK, Gebäudeservice' },
-        { icon: '🏗️', title: 'Baugewerbe', desc: 'Bauunternehmen, GU, Subunternehmer, Planung' },
-        { icon: '🤝', title: 'Vereine & Verbände', desc: 'Sport, Kultur, Berufsverbände, NGOs' },
+        { icon: 'Wrench',   title: 'Fachbetriebe',     desc: 'Handwerk, Elektro, SHK, Gebäudeservice' },
+        { icon: 'Building2', title: 'Baugewerbe',      desc: 'Bauunternehmen, GU, Subunternehmer, Planung' },
+        { icon: 'Users',    title: 'Vereine & Verbände', desc: 'Sport, Kultur, Berufsverbände, NGOs' },
       ],
     },
+    values: [
+      { icon: 'Target',    title: 'Ergebnisorientiert',  desc: 'Wir messen unseren Erfolg an Ihren messbaren Ergebnissen.' },
+      { icon: 'Shield',    title: 'Vertrauenswürdig',    desc: 'DSGVO-Konformität und Datensicherheit stehen bei uns an erster Stelle.' },
+      { icon: 'Zap',       title: 'Agil',               desc: 'Kurze Entwicklungszyklen und schnelle Ergebnisse statt jahrelanger Projekte.' },
+      { icon: 'Handshake', title: 'Partnerschaftlich',  desc: 'Wir verstehen uns als langfristiger Technologiepartner, nicht als Dienstleister.' },
+    ],
     cta: 'Termin buchen',
   },
 
@@ -247,6 +264,12 @@ export const t = {
       phone: '+49 (0) 123 456 789',
       location: 'Deutschland',
     },
+    whyItems: [
+      { icon: 'Zap',      text: 'Schnelle Umsetzung – erste Ergebnisse in Wochen, nicht Monaten' },
+      { icon: 'Target',   text: 'ROI-fokussiert – wir liefern messbare Einsparungen' },
+      { icon: 'Shield',   text: 'DSGVO-konform – 100% Datensicherheit garantiert' },
+      { icon: 'Handshake', text: 'Langfristige Partnerschaft – wir wachsen mit Ihrem Betrieb' },
+    ],
   },
 
   footer: {

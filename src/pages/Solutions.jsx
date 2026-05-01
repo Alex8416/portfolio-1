@@ -1,13 +1,14 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { t } from '../lib/translations'
+import Icon from '../components/Icon'
 
 const solutionMeta = {
-  dms: { color: 'blue', icon: '🗂️', heroGradient: 'from-blue-600 to-blue-400' },
-  workflows: { color: 'purple', icon: '🤖', heroGradient: 'from-purple-600 to-purple-400' },
-  automations: { color: 'orange', icon: '⚙️', heroGradient: 'from-orange-500 to-amber-400' },
-  customApps: { color: 'teal', icon: '💻', heroGradient: 'from-teal-600 to-teal-400' },
-  chatbots: { color: 'sky', icon: '💬', heroGradient: 'from-sky-600 to-blue-500' },
+  dms:        { icon: 'FolderOpen', heroGradient: 'from-blue-600 to-blue-500' },
+  workflows:  { icon: 'Brain',      heroGradient: 'from-purple-600 to-purple-500' },
+  automations:{ icon: 'Settings2',  heroGradient: 'from-orange-500 to-amber-500' },
+  customApps: { icon: 'Monitor',    heroGradient: 'from-teal-600 to-teal-500' },
+  chatbots:   { icon: 'Bot',        heroGradient: 'from-sky-600 to-blue-600' },
 }
 
 export default function Solutions() {
@@ -24,7 +25,9 @@ export default function Solutions() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(255,255,255,0.1),_transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="text-5xl mb-6">{meta.icon}</div>
+            <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-6">
+              <Icon name={meta.icon} size={30} strokeWidth={1.5} className="text-white" />
+            </div>
             <h1 className="text-3xl md:text-5xl font-bold mb-3">{data.title}</h1>
             <p className="text-xl opacity-90 mb-4">{data.subtitle}</p>
             <p className="text-base opacity-80 max-w-2xl leading-relaxed">{data.description}</p>
