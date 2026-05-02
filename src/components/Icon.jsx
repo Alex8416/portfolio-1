@@ -3,7 +3,10 @@ import {
   Wrench, Building2, Users, Link2, Code2, BarChart2, Cloud,
   Target, Shield, Zap, Handshake, Rocket, Mail, Phone,
   MapPin, ChevronRight, ChevronDown, Menu, X, Check,
-  AlertCircle, ArrowRight, Bot, FileText, Workflow,
+  AlertCircle, AlertTriangle, CheckCircle2, ArrowRight,
+  Bot, FileText, Workflow, TrendingDown, TrendingUp,
+  Search, Database, Clock, Globe, Cpu, GitBranch,
+  Timer, BadgeCheck, Euro, CalendarClock,
 } from 'lucide-react'
 
 const icons = {
@@ -11,7 +14,10 @@ const icons = {
   Wrench, Building2, Users, Link2, Code2, BarChart2, Cloud,
   Target, Shield, Zap, Handshake, Rocket, Mail, Phone,
   MapPin, ChevronRight, ChevronDown, Menu, X, Check,
-  AlertCircle, ArrowRight, Bot, FileText, Workflow,
+  AlertCircle, AlertTriangle, CheckCircle2, ArrowRight,
+  Bot, FileText, Workflow, TrendingDown, TrendingUp,
+  Search, Database, Clock, Globe, Cpu, GitBranch,
+  Timer, BadgeCheck, Euro, CalendarClock,
 }
 
 export default function Icon({ name, size = 20, className = '', strokeWidth = 1.75 }) {

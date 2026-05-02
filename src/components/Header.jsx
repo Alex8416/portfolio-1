@@ -19,7 +19,11 @@ export default function Header() {
   }, [])
 
   const navLinkClass = ({ isActive }) =>
-    `text-sm font-medium transition-colors ${isActive ? 'text-sky-600' : 'text-gray-700 hover:text-sky-600'}`
+    `text-sm font-medium transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:bg-sky-600 after:transition-all after:duration-200 ${
+      isActive
+        ? 'text-sky-600 after:w-full'
+        : 'text-gray-700 hover:text-sky-600 after:w-0 hover:after:w-full'
+    }`
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">

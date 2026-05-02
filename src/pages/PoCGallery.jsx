@@ -27,15 +27,56 @@ export default function PoCGallery() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-700 text-white py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <p className="text-sky-400 font-semibold text-sm uppercase tracking-wider mb-3">Proof of Concepts</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Referenzprojekte</h1>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-700 text-white py-20 md:py-28">
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: 'linear-gradient(rgba(255,255,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
+            <p className="text-sky-400 font-semibold text-xs uppercase tracking-widest mb-3">Proof of Concepts</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Referenzprojekte</h1>
+            <p className="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed">
               Reale Ergebnisse für echte Betriebe. Sehen Sie, wie VAMIT manuelle Prozesse in effiziente Systeme verwandelt.
             </p>
           </motion.div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full">
+            <path d="M0,40 C480,0 960,40 1440,15 L1440,40 Z" fill="white" />
+          </svg>
+        </div>
+        <div className="h-6" />
+      </section>
+
+      {/* Stats strip */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-gray-100">
+            {[
+              { value: '12+', label: 'Referenzprojekte', sub: 'abgeschlossen & live' },
+              { value: '90%', label: 'Ø Zeitersparnis', sub: 'vs. manueller Prozess' },
+              { value: '75%', label: 'Ø Kostensenkung', sub: 'der Prozesskosten' },
+              { value: '8 Wo.', label: 'Ø Umsetzungszeit', sub: 'Analyse bis Go-live' },
+            ].map((s, i) => (
+              <motion.div
+                key={s.label}
+                custom={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.07, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="text-center py-7 px-4"
+              >
+                <div className="text-3xl font-bold text-sky-600 tracking-tight">{s.value}</div>
+                <div className="text-xs text-gray-700 mt-1 font-semibold">{s.label}</div>
+                <div className="text-[11px] text-gray-400 mt-0.5">{s.sub}</div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -75,7 +116,8 @@ export default function PoCGallery() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.25 }}
+                  transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                  whileHover={{ y: -5, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
                 >
                   <PoCCard
                     poc={poc}

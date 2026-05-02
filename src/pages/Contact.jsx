@@ -38,13 +38,27 @@ export default function Contact() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-sky-700 to-blue-600 text-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{ct.headline}</h1>
+      <section className="relative overflow-hidden bg-gradient-to-br from-sky-700 to-blue-600 text-white py-16 md:py-24">
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: 'linear-gradient(rgba(255,255,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        />
+        <div className="relative max-w-3xl mx-auto px-4 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
+            <p className="text-sky-300 font-semibold text-xs uppercase tracking-widest mb-3">Kostenlose Erstberatung</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">{ct.headline}</h1>
             <p className="text-sky-100 text-base max-w-xl mx-auto leading-relaxed">{ct.subline}</p>
           </motion.div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full">
+            <path d="M0,40 C480,0 960,40 1440,15 L1440,40 Z" fill="#f9fafb" />
+          </svg>
+        </div>
+        <div className="h-6" />
       </section>
 
       {/* Content */}

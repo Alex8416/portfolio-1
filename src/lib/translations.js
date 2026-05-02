@@ -15,17 +15,17 @@ export const t = {
   },
 
   hero: {
-    badge: 'Intelligente Lösungen für Ihr Unternehmen',
-    headline: 'Die Zukunft der Geschäftsprozesse',
+    badge: 'Automatisierung für den Mittelstand',
+    headline: 'Ihr Betrieb.\nIntelligent automatisiert.',
     subline:
-      'VAMIT transformiert manuelle Abläufe in intelligente, automatisierte Systeme. Von Dokumentenmanagement bis hin zu KI-gestützten Workflows – wir machen Ihr Unternehmen effizienter, fehlerfreier und zukunftssicher.',
+      'VAMIT digitalisiert manuelle Prozesse für Fachbetriebe, Baugewerbe und Vereine – mit nachweisbarem ROI ab dem ersten Monat. Festpreis. 8 Wochen Umsetzung. Kein Vendor Lock-in.',
     cta: 'Kostenlose Prozessanalyse anfordern',
     ctaSecondary: 'Referenzprojekte ansehen',
     stats: [
-      { value: '90%', label: 'Ø Zeitersparnis' },
-      { value: '75%', label: 'Ø Kostensenkung' },
-      { value: '6+', label: 'Referenzprojekte' },
-      { value: '24h', label: 'Antwortzeit' },
+      { value: '90%', label: 'Ø Zeitersparnis', sub: 'gegenüber manuellem Prozess' },
+      { value: '75%', label: 'Ø Kostensenkung', sub: 'der Prozesskosten' },
+      { value: '8 Wo.', label: 'Ø Umsetzungszeit', sub: 'von Analyse bis Go-live' },
+      { value: '24h', label: 'Reaktionszeit', sub: 'bei Support-Anfragen' },
     ],
   },
 
