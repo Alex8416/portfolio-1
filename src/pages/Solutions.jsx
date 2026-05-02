@@ -51,7 +51,7 @@ export default function Solutions() {
       </section>
 
       {/* Problem / Solution */}
-      <section className="py-16 bg-white">
+      <section className="py-10 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -159,7 +159,7 @@ export default function Solutions() {
       </section>
 
       {/* Other solutions */}
-      <section className="py-16 bg-white">
+      <section className="py-10 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <p className="text-sky-600 font-semibold text-xs uppercase tracking-widest mb-2">Entdecken Sie mehr</p>

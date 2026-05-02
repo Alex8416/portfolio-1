@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* ─── Services Grid ─── */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -299,7 +299,7 @@ export default function Home() {
       </section>
 
       {/* ─── Process ─── */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white overflow-x-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -329,16 +329,13 @@ export default function Home() {
 
                 <div className="relative bg-white rounded-2xl border border-gray-100 p-6 hover:border-sky-100 hover:shadow-lg transition-all h-full">
                   <div className="flex items-center justify-between mb-4">
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${step.iconBg || 'bg-sky-100 text-sky-600'}`}
-                      style={{ background: step.color.includes('sky') ? undefined : undefined }}>
-                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                        i === 0 ? 'bg-sky-100 text-sky-600' :
-                        i === 1 ? 'bg-blue-100 text-blue-600' :
-                        i === 2 ? 'bg-indigo-100 text-indigo-600' :
-                        'bg-purple-100 text-purple-600'
-                      }`}>
-                        <Icon name={step.icon} size={20} strokeWidth={1.75} />
-                      </div>
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                      i === 0 ? 'bg-sky-100 text-sky-600' :
+                      i === 1 ? 'bg-blue-100 text-blue-600' :
+                      i === 2 ? 'bg-indigo-100 text-indigo-600' :
+                      'bg-purple-100 text-purple-600'
+                    }`}>
+                      <Icon name={step.icon} size={20} strokeWidth={1.75} />
                     </div>
                     <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${step.color}`}>
                       {step.duration}
@@ -355,7 +352,7 @@ export default function Home() {
       </section>
 
       {/* ─── Tech Stack ─── */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -408,7 +405,7 @@ export default function Home() {
       </section>
 
       {/* ─── Featured PoC ─── */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -453,7 +450,7 @@ export default function Home() {
       </section>
 
       {/* ─── Industries ─── */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}

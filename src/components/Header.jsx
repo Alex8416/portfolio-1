@@ -116,7 +116,7 @@ export default function Header() {
             className="md:hidden overflow-hidden border-t border-gray-100 bg-white"
           >
             <nav className="px-4 py-4 flex flex-col gap-1">
-              <NavLink to="/" end onClick={() => setMobileOpen(false)} className={navLinkClass + ' py-2'}>
+              <NavLink to="/" end onClick={() => setMobileOpen(false)} className={({ isActive }) => navLinkClass({ isActive }) + ' py-2'}>
                 {t.nav.home}
               </NavLink>
               <div className="py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider pt-3">{t.nav.solutions}</div>
@@ -129,8 +129,8 @@ export default function Header() {
                   {item.label}
                 </NavLink>
               ))}
-              <NavLink to="/poc" onClick={() => setMobileOpen(false)} className={navLinkClass + ' py-2'}>{t.nav.poc}</NavLink>
-              <NavLink to="/about" onClick={() => setMobileOpen(false)} className={navLinkClass + ' py-2'}>{t.nav.about}</NavLink>
+              <NavLink to="/poc" onClick={() => setMobileOpen(false)} className={({ isActive }) => navLinkClass({ isActive }) + ' py-2'}>{t.nav.poc}</NavLink>
+              <NavLink to="/about" onClick={() => setMobileOpen(false)} className={({ isActive }) => navLinkClass({ isActive }) + ' py-2'}>{t.nav.about}</NavLink>
               <Link
                 to="/contact"
                 onClick={() => setMobileOpen(false)}
