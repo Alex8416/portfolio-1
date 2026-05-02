@@ -23,4 +23,55 @@
     display: flex;
     flex-direction: column;
   }
+
+  /* Focus visible – accessible, non-intrusive */
+  :focus-visible {
+    outline: 2px solid #0284c7;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Form inputs */
+  .input {
+    display: block;
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #111827;
+    background-color: #ffffff;
+    border: 1.5px solid #d1d5db;
+    border-radius: 0.625rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    appearance: none;
+    font-family: inherit;
+  }
+
+  .input:focus {
+    outline: none;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+  }
+
+  .input::placeholder {
+    color: #9ca3af;
+  }
+
+  .input:disabled {
+    background-color: #f9fafb;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* Smooth page transitions */
+  .page-enter {
+    animation: fadeUp 0.35s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 }
